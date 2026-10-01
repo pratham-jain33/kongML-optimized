@@ -1,0 +1,8 @@
+# Transcription service dependencies.
+# No torch: inference runs on the fp32 ONNX model via onnxruntime, and the
+# numpy-only post-processor is vendored in postproc.py (MIT, from Kong's
+# piano_transcription_inference). This keeps the 512MB Render container safe.
+flask==3.1.0
+numpy
+soundfile
+onnxruntime
